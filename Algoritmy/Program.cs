@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 
 namespace Algoritmy
 {
@@ -7,9 +8,14 @@ namespace Algoritmy
     {
         public static void Main(string[] args)
         {
-            Binary_Search binarySearch = new Binary_Search();
-            IList<int> myList = new List<int> {1, 2, 3, 4, 5};
-            Console.WriteLine(binarySearch.BinarySearch(myList, 3).ToString());
+            int[] myArr = new[] { 8, 2, 4, 1, 3, 5 };
+            Selection_Sort selectionSort = new Selection_Sort();
+            selectionSort.SelectionSort(myArr);
+            
+            foreach (var m in myArr)
+            {
+                Console.Write(m + " ");
+            }
         }
     }
 }
